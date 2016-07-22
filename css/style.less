@@ -1,0 +1,153 @@
+/*Pre defined classes*/
+
+.row,p,h1,h2,h3, body{
+	margin: 0;
+}
+
+img{
+	margin: auto;
+}
+
+.tac{
+	text-align: center;
+}
+
+.cb{
+	clear: both;
+}
+
+*{
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+	font-weight: 400;
+}
+
+.bold{
+	font-weight: 700;
+}
+
+.light{
+	font-weight: 300;
+}
+
+.ebold{
+	font-weight: 800;
+}
+
+/*Pre defined classes end*/
+
+body{
+	background: #F3F3F3;
+	margin-bottom: 35px;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+/*Header*/
+header{
+	background-image: url('https://b.zmtcdn.com/images/foodshots/cover/pizza3.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-bottom: 2%;
+
+	.layer{
+		background-color: rgba(0, 0, 0, 0.24);
+		padding: 5% 0;
+	}
+}
+
+/*The box that is listing the products*/
+.listingbox{
+	background: white;
+	box-shadow: 0 2px 2px grey;
+	margin: 30px 0;
+	transition: box-shadow 0.8s ease; 
+	overflow: hidden;
+	border: 1px solid #e7e7e7;
+	&:hover{
+		box-shadow: 0 2px 22px grey;
+	}
+
+	p{ 
+		margin-top: 10px;
+		line-height: 22px;
+	}
+
+	a{
+		text-decoration: none;
+		margin-bottom: 10px;
+	}
+
+	.listtitle{
+		font-size: 20px;
+		border-bottom: 1px solid black;
+		padding-right: 5px;
+		padding-bottom: 2px;
+		transition: color 0.3s ease, border-color 0.3s ease;  
+		&:hover{
+			color: lighten(black, 20%);
+			border-color:  lighten(black, 20%);
+		}
+	}
+
+	.listdata{
+		padding: 22px 15px;
+	}
+
+	.listingimage{
+		transition: all .5s ease-in-out; 
+		&:hover{
+			transform: scale(1.05);
+		}
+	}
+}
+
+#searcharea{
+	select, input{
+		margin: 10px 0;
+	}
+}
+
+#logoarea{
+	text-align: center;
+	margin-bottom: 3%;
+	
+	div{
+		width: 100px;
+		height: 100px;
+		padding-top: 34px;
+		color: white;
+		background: #4b0000;
+		vertical-align: middle;
+		margin: auto;
+		font-size: 20px;
+		transition: all .5s ease-in-out; 
+		cursor: default;
+
+		&:hover{
+			background: lighten(#4b0000, 10%);
+			-ms-transform: rotate(-7deg); /* IE 9 */
+			-webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+			transform: rotate(-7deg);
+		}
+	}
+}
+
+#copyrightinfo{
+	background: grey;
+	padding: 8px 0;
+	margin-top: 30px;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 35px;
+	margin-top: 50px;
+	background-color: grey !important;
+	p{
+		font-size: 15px;
+	}
+}

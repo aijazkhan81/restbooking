@@ -1,0 +1,16 @@
+<div class="row" id="displayListings">
+	<div class="container">
+		<div class="col-sm-4" ng-repeat="rest in restaurants | filter: { city: cityFilter.city} | filter: normalFilter">
+			<div class="listingbox">
+				<img ng-src="{{rest.image}}" class="img-responsive listingimage">
+				<div class="listdata">
+					<a href="#"><span class="bold listtitle">{{rest.title}}</span></a>
+					<p><strong>Description:</strong> {{rest.description | limitTo: letterLimit}} <br>
+						<strong>City:</strong> {{rest.city}} <br>
+						<strong>Cost for two:</strong> {{rest.price | currency}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
