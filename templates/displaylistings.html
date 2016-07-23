@@ -1,6 +1,6 @@
 <div class="row" id="displayListings">
 	<div class="container">
-		<div class="col-sm-4" ng-repeat="rest in restaurants | filter: { city: cityFilter.city} | filter: normalFilter">
+		<div class="col-sm-4" ng-repeat="rest in restaurants | filter: { city: cityFilter.city} | filter: normalFilter | limitTo: onlySix">
 			<div class="listingbox">
 				<img ng-src="{{rest.image}}" class="img-responsive listingimage">
 				<div class="listdata">
@@ -11,6 +11,9 @@
 					</p>
 				</div>
 			</div>
+		</div>
+		<div class="col-sm-12">
+			<button class="btn btn-secondary btn-lg btn-block loadmorebutton" ng-click="loadMore()" ng-hide="hideLoadMore">Load More</button>
 		</div>
 	</div>
 </div>
