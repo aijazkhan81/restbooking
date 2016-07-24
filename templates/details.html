@@ -34,7 +34,9 @@
 				</p> <br>
 				<p class="small">
 					Category:  <span ng-repeat="categories in restaurants[restId].category">{{categories}}  {{$last ? '' : ($index==shifts.length-2) ? 'and' : '-'}} </span>
-				</p>
+				</p> <br>
+
+				<a href="#/" class="backtolistings bold btn btn-secondary"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Back to Listings</a>
 			</div>
 		</div>
 	</div>
