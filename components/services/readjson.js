@@ -1,6 +1,11 @@
-app.factory('readJson', function($http){
+app.factory('readJson', function($http, $q){
 	function readJsonfun(){
-		return $http.get('components/controller/details.json')
+		var deffered = $q.defer()
+		$http.get('components/controller/details.json').then(function(data){
+			var _data = data.data;
+			deffered.resolve(_data)
+		});
+		return deffered.promise
 	}
 
 	return{

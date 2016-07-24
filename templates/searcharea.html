@@ -1,10 +1,10 @@
 <div class="row" id="searcharea">
 	<div class="col-sm-offset-2 col-sm-3">
-		<select class="form-control" ng-model="cityFilter" ng-options="x as x.city for x in restaurants | unique: 'city' | orderBy:'city'">
+		<select class="form-control" ng-model="cityFilter" ng-change="iterate()" ng-options="x as x.city for x in restaurants | unique: 'city' | orderBy:'city'">
 			<option value="">Select City</option>
 		</select>
 	</div>
 	<div class="col-sm-5 col-md-5">
-		<input type="text" class="form-control" ng-model="normalFilter" placeholder="Filter by name, category">
+		<input type="text" class="form-control" ng-change="iterate()" ng-model="normalFilter" placeholder="Filter by name, category">
 	</div>
 </div>
