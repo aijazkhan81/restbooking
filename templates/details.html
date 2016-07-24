@@ -1,0 +1,41 @@
+<header>
+	<div class="layer">
+		<div class="container">
+			<a href="#/">
+				<div class="row" id="logoarea">
+					<div>
+						Logo
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</header>
+<div class="row detailspage">
+	<div class="container">
+		<div class="col-sm-12">
+			<h1 class="bold tac">{{restaurants[restId].title}}</h1> 
+			<hr>
+		</div>
+		<div class="col-sm-4">
+			<img ng-src="{{restaurants[restId].image}}" class="img-responsive listingimage">
+		</div>
+		<div class="col-sm-8">
+			<div class="listdata">
+				<p><strong>Description:</strong> {{restaurants[restId].description}} <br>
+					<strong>City:</strong> {{restaurants[restId].city}} <br>
+					<strong>Cost for two:</strong> Around {{restaurants[restId].price | currency}}
+				</p> <br>
+
+				<h4 class="bold">Contact Details</h4>
+				<p><strong>Name:</strong> {{restaurants[restId].contact.name}} <br>
+					<strong>Phone:</strong> <a href="tel:{{restaurants[restId].contact.phone}}">{{restaurants[restId].contact.phone}}</a> <br>
+					<strong>Email:</strong> <a href="mailto:{{restaurants[restId].contact.email}}">{{restaurants[restId].contact.email}}</a>
+				</p> <br>
+				<p class="small">
+					Category:  <span ng-repeat="categories in restaurants[restId].category">{{categories}}  {{$last ? '' : ($index==shifts.length-2) ? 'and' : '-'}} </span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

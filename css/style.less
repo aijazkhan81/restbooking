@@ -56,6 +56,10 @@ header{
 	.layer{
 		background-color: rgba(0, 0, 0, 0.24);
 		padding: 5% 0;
+
+		a:hover{
+			text-decoration: none;
+		}
 	}
 }
 
@@ -132,7 +136,12 @@ header{
 			-ms-transform: rotate(-7deg); /* IE 9 */
 			-webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
 			transform: rotate(-7deg);
+			text-decoration: none;
+			cursor: pointer;
 		}
+	}
+	a:hover{
+		text-decoration: none;
 	}
 }
 
@@ -154,4 +163,26 @@ header{
 
 .loadmorebutton{
 	margin: 20px 0;
+}
+
+hr{
+	border-color: #c7c7c7;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.detailspage{
+	padding-bottom: 30px;	
+	.listingimage{
+		margin-bottom: 20px;
+		border: 2px solid black;
+	}
+
+	p{
+		line-height: 25px;
+	}
+
+	a{
+		color: inherit;
+	}
 }

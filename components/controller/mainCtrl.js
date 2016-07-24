@@ -1,11 +1,11 @@
-app.controller('mainCtrl', function($scope, $http, readJson){
+app.controller('mainCtrl', function($scope, $http, readJson,$routeParams){
 
 
 	// Calling from readJson service
 	function fetchData (){
 		readJson.readJsonfun().then(function(data) {
-			console.log(data)
 			$scope.restaurants = data;
+			$scope.restId = $routeParams.num - 1;
 		})
 	}
 	fetchData();
