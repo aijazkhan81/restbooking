@@ -1,6 +1,6 @@
 <div class="row" id="searcharea">
 	<div class="col-sm-offset-2 col-sm-3">
-		<select class="form-control" ng-model="cityFilter" ng-change="iterate()" ng-options="x as x.city for x in restaurants | unique: 'city' | orderBy:'city'">
+		<select class="form-control" ng-model="cityFilter" ng-change="optionsIterate()" ng-options="x as x.city for x in restaurants | unique: 'city' | orderBy:'city'">
 			<option value="">Select City</option>
 		</select>
 	</div>
