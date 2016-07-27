@@ -1,41 +1,42 @@
-<div class="row">
+<div class="row" id="addclassifiedrow" ng-hide="formDisplay">
 	<div class="container">
 	<form class="row" id="addclassified">
-			<div class="col-sm-3">
-				<input type="Name" class="form-control" name="title" ng-model="rest.title" placeholder="Title">
+			<div class="col-sm-12">
+				<h2 class="tac bold">Add a new Restaurant</h2> <br>
 			</div>
 			<div class="col-sm-3">
-				<input type="text" class="form-control" ng-model="rest.description" placeholder="Description">
+				<input type="Name" class="form-control" name="title" ng-model="rest.title" placeholder="Title" id="newTitle" required>
 			</div>
 			<div class="col-sm-3">
-				<input type="text" class="form-control" ng-model="rest.price" placeholder="Price">
+				<input type="text" class="form-control" ng-model="rest.description" placeholder="Description" required>
+			</div>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" ng-model="rest.price" placeholder="Price" required>
+			</div>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" ng-model="rest.city" placeholder="City" required>
+			</div>
+			<div class="col-sm-3">
+				<input type="text" class="form-control" name="name" ng-model="rest.contact.name" placeholder="Contact Name">
+			</div>
+			<div class="col-sm-3">
+				<input type="phone" class="form-control" ng-model="rest.contact.phone" placeholder="Contact Phone">
+			</div>
+			<div class="col-sm-3">
+				<input type="email" class="form-control" ng-model="rest.contact.email" placeholder="Contact Email">
 			</div>
 			<div class="col-sm-3">
 				<input type="text" class="form-control" ng-model="rest.image" placeholder="Image link">
-			</div>
-			<div class="col-sm-4">
-				<input type="text" class="form-control" name="name" ng-model="rest.contact.name" placeholder="Contact Name">
-			</div>
-			<div class="col-sm-4">
-				<input type="phone" class="form-control" ng-model="rest.contact.phone" placeholder="Contact Phone">
-			</div>
-			<div class="col-sm-4">
-				<input type="email" class="form-control" ng-model="rest.contact.email" placeholder="Contact Email">
 			</div>
 			<div class="col-sm-6">
 				<button class="btn btn-primary" ng-click="submitListing(rest)">Submit</button>
 			</div>
 			<div class="col-sm-6">
-				<button class="btn btn-primary" ng-click="showHidePanel()">Cancel</button>
+				<button class="btn btn-danger" ng-click="showHidePanel()">Cancel</button> <br><br>
 			</div>
 		</form>
 	</div>
-</div>
-<div>
-	<form>
-
-		<pre>{{rest | json}}</pre>
-	</form>
+	<hr>
 </div>
 <div class="row" id="displayListings">
 	<div class="container">

@@ -42,61 +42,51 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
 		checkLoadMore();
 	}
 
+	$scope.hello = function(){
+		alert('abc');
+	}
 
-	// Function for calculating new ID for the new listing added
-	// var	newId = "";
+	// Form show and hide 
+	$scope.formDisplay = true;
+	$scope.focusyes = true;
 
-	// function findId(){
-	// 	return readJson.readJsonfun().then(function(data) {
-	// 		newId = data.length + 1;
-	// 		return $q.when(newId);
-	// 	});
-	// }
-	// findId().then(function(){
-	// 	console.log(newId);
-	// 	var newId = newId;
-	// });
+	$scope.showHidePanel = function(){
+		$scope.formDisplay = !$scope.formDisplay;		
+	}
 
-	
-	// console.log(newId + 'abc');
 
 	$scope.submitListing = function(rest){
 		if(rest){
-			$scope.restaurants.push(rest);
+			firstFunction();
+			$scope.rest.id = $scope.abc;
+			if($scope.rest.image == "" || $scope.rest.image == null){
+				$scope.rest.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/800px-No_image_3x4.svg.png";
+			}
+			$scope.restaurants.unshift(rest);
 			$scope.rest = {};
+			$scope.showHidePanel();
 		}
 	}
 
-	var newId = 10;
+	// Function for getting the ID for new classified
+
+	var newId = "";
 	var modifiedId1;
-	var modifiedId2;
-
-	console.log(newId + ' before function call');
-
+	$scope.abc;
 
 	function findId(){
 		return readJson.readJsonfun().then(function(data) {
-			newId = data.length + 1;
+			newId  = data.length + 1;
 			return $q.when(newId);
 		});
 	}
 
 	findId().then(function(id){
-    	firstFunction(newId); 
+		firstFunction(newId); 
 	});
 
 	function firstFunction(id){
-		$scope.onlySix = id * 2;
-	}
-
-	firstFunction(2);
-
-	function secondFunction(){
-		return findId().then(function(id){
-       //second time we need it, newId is updates
-       modifiedId2 = id * 4;
-       return $q.when();
-   });
+		$scope.abc = newId;
 	}
 
 	
