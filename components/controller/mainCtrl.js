@@ -1,4 +1,4 @@
-app.controller('mainCtrl', function($scope, $http, readJson,$routeParams){
+app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
 
 
 	// Calling from readJson service
@@ -22,6 +22,7 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams){
 		fetchData();
 	}
 
+	// Function for hiding the loadmore button if no more listings present
 	function checkLoadMore(){
 		if($scope.some.length <= $scope.onlySix){
 			$scope.hideLoadMore = true;
@@ -41,27 +42,65 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams){
 		checkLoadMore();
 	}
 
-	var jsObjects = [
-	{a: 1, b: 2}, 
-	{a: 3, b: 4}, 
-	{a: 5, b: 8}, 
-	{a: 7, b: 6}, 
-	{a: 8, b: 6}, 
-	{a: 9, b: 6}, 
-	{a: 7, b: 8}
-	];
 
-	var newList = [];
-	function newArray(a,num){
-		for (var i = 0; i <= jsObjects.length - 1; i++) {
+	// Function for calculating new ID for the new listing added
+	// var	newId = "";
 
-			if(jsObjects[i].a == num || jsObjects[i].b == num){
-				console.log('yes');
-				newList.push(jsObjects[i]);
-				console.log(newList);
-			}
+	// function findId(){
+	// 	return readJson.readJsonfun().then(function(data) {
+	// 		newId = data.length + 1;
+	// 		return $q.when(newId);
+	// 	});
+	// }
+	// findId().then(function(){
+	// 	console.log(newId);
+	// 	var newId = newId;
+	// });
+
+	
+	// console.log(newId + 'abc');
+
+	$scope.submitListing = function(rest){
+		if(rest){
+			$scope.restaurants.push(rest);
+			$scope.rest = {};
 		}
 	}
-	var a = $scope.something;
-	newArray(a,7);	
+
+	var newId = 10;
+	var modifiedId1;
+	var modifiedId2;
+
+	console.log(newId + ' before function call');
+
+
+	function findId(){
+		return readJson.readJsonfun().then(function(data) {
+			newId = data.length + 1;
+			return $q.when(newId);
+		});
+	}
+
+	findId().then(function(id){
+    	firstFunction(newId); 
+	});
+
+	function firstFunction(id){
+		$scope.onlySix = id * 2;
+	}
+
+	firstFunction(2);
+
+	function secondFunction(){
+		return findId().then(function(id){
+       //second time we need it, newId is updates
+       modifiedId2 = id * 4;
+       return $q.when();
+   });
+	}
+
+	
+
+	console.log(modifiedId1 + ' final');
+	
 });
