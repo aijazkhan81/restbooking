@@ -1,4 +1,4 @@
-var app = angular.module('app', ['angular.filter', 'ngRoute']);
+var app = angular.module('app', ['angular.filter', 'ngRoute', 'ngAnimate']);
 
 // // Routing
 app.config(function($routeProvider) {

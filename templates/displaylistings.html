@@ -29,7 +29,8 @@
 				<input type="text" class="form-control" ng-model="rest.image" placeholder="Image link">
 			</div>
 			<div class="col-sm-6">
-				<button class="btn btn-primary" ng-click="submitListing(rest)">Submit</button>
+				<button class="btn btn-primary" ng-show="!saveEdit" ng-click="submitListing(rest)">Submit</button>
+				<button class="btn btn-primary" ng-show="saveEdit" ng-click="submitListing(rest)">Save Edit</button>
 			</div>
 			<div class="col-sm-6">
 				<button class="btn btn-danger" ng-click="showHidePanel()">Cancel</button> <br><br>
@@ -50,6 +51,7 @@
 						<strong>Cost for two:</strong> {{rest.price | currency}}
 					</p>
 				</div>
+				<button ng-click="editlist(rest)" class="btn btn-default" id="editbutton" >Edit</button>
 			</div>
 		</div>
 		<div ng-show="restaurants.length > onlySix" class="col-sm-12">

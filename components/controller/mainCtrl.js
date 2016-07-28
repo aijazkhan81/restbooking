@@ -1,4 +1,4 @@
-app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
+app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q, $location, $anchorScroll){
 
 
 	// Calling from readJson service
@@ -51,7 +51,11 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
 	$scope.focusyes = true;
 
 	$scope.showHidePanel = function(){
-		$scope.formDisplay = !$scope.formDisplay;		
+		$scope.formDisplay = !$scope.formDisplay;
+		$scope.saveEdit = false;	
+		$scope.rest = null;
+		// $location.hash('addclassifiedrow');
+		// $anchorScroll();	
 	}
 
 
@@ -63,7 +67,7 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
 				$scope.rest.image = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/800px-No_image_3x4.svg.png";
 			}
 			$scope.restaurants.unshift(rest);
-			$scope.rest = {};
+			$scope.rest = null;
 			$scope.showHidePanel();
 		}
 	}
@@ -89,8 +93,11 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q){
 		$scope.abc = newId;
 	}
 
-	
-
-	console.log(modifiedId1 + ' final');
+	// Function for editing listing
+	$scope.editlist = function(rest){
+		$scope.showHidePanel();
+		$scope.rest = rest;
+		$scope.saveEdit = true;
+	}
 	
 });
