@@ -58,7 +58,6 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q, $l
 		// $anchorScroll();	
 	}
 
-
 	$scope.submitListing = function(rest){
 		if(rest){
 			firstFunction();
@@ -98,6 +97,18 @@ app.controller('mainCtrl', function($scope, $http, readJson,$routeParams, $q, $l
 		$scope.showHidePanel();
 		$scope.rest = rest;
 		$scope.saveEdit = true;
+	}
+
+	// Function for filtering restaurants that serve alcohol
+
+	$scope.servesAlchohol = "";
+	$scope.serAlcFun = function(){
+		if($scope.servesAlchohol){
+			$scope.servesAlchohol = restaurants.alcohol;
+			$scope.ruman = restaurants.ruman;	
+		}else{
+			$scope.servesAlchohol = "";
+		}
 	}
 	
 });

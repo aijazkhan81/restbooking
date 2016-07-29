@@ -1,6 +1,6 @@
 <div class="row" id="addclassifiedrow" ng-hide="formDisplay">
 	<div class="container">
-	<form class="row" id="addclassified">
+		<form class="row" id="addclassified">
 			<div class="col-sm-12">
 				<h2 class="tac bold">Add a new Restaurant</h2> <br>
 			</div>
@@ -39,9 +39,18 @@
 	</div>
 	<hr>
 </div>
+<div class="row" id="filtersection">
+	<div class="container">
+		<div class="col-sm-3">
+			<div class="checkbox">
+			<label><input type="checkbox" ng-model="servesAlchohol" id="alcohol" ng-change="serAlcFun()">Serves alcohol</label>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="row" id="displayListings">
 	<div class="container">
-		<div class="col-sm-4" ng-repeat="rest in a = (some = (restaurants | filter: { city: cityFilter.city} | filter: normalFilter) | limitTo: onlySix)">
+		<div class="col-sm-4" ng-repeat="rest in a = (some = (restaurants | filter: { city: cityFilter.city} | filter: normalFilter | filter: servesAlchohol | filter: ruman ) | limitTo: onlySix)">
 			<div class="listingbox">
 				<img ng-src="{{rest.image}}" class="img-responsive listingimage">
 				<div class="listdata">
@@ -55,7 +64,7 @@
 			</div>
 		</div>
 		<div ng-show="restaurants.length > onlySix" class="col-sm-12">
-			<button class="btn btn-secondary btn-lg btn-block loadmorebutton" ng-click="loadMore()" ng-hide="hideLoadMore">Load More</button>
+			<button class="btn btn-default btn-lg btn-block loadmorebutton" ng-click="loadMore()" ng-hide="hideLoadMore">Load More</button>
 		</div>
 	</div>
 </div>

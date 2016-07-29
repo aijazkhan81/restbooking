@@ -15,6 +15,7 @@
 			"American"
 		],
 		"image": "https://www.charlescountymd.gov/sites/default/files/coadmin/tourism/pizza-hut.jpg",
+		"alcohol": false,
 		"views":213
 	},
 	{
@@ -32,6 +33,7 @@
 			"Pizza", "American"
 		],
 		"image":"http://www.homepizzachef.com/images/pizza.jpg",
+		"alcohol": false,
 		"views":422
 	},
 	{
@@ -49,6 +51,8 @@
 			"Pizza", "American"
 		],
 		"image":"http://2.bp.blogspot.com/-TFTloIJcJA8/UV7b2O35gEI/AAAAAAAAWXs/vUAO4N_vx6Y/s1600/little-caesars-deep-deep-dish-pizza-03.JPG",
+		"alcohol": true,
+		"ruman": false,
 		"views":23
 	},
 	{
@@ -66,6 +70,7 @@
 			"Pizza", "American"
 		],
 		"image":"http://2.bp.blogspot.com/-TFTloIJcJA8/UV7b2O35gEI/AAAAAAAAWXs/vUAO4N_vx6Y/s1600/little-caesars-deep-deep-dish-pizza-03.JPG",
+		"alcohol": false,
 		"views":77
 	},
 	{
@@ -83,6 +88,7 @@
 			"Pizza", "American"
 		],
 		"image":"http://media.coreperformance.com/images/how-to-build-a-healthy-pizza.jpg",
+		"alcohol": false,
 		"views":889
 	},
 	{
@@ -100,6 +106,7 @@
 			"Pizza", "American"
 		],
 		"image":"http://dumaguete.com/wp-content/uploads/2014/12/Nevas-Kuripot-Pizza.jpg",
+		"alcohol": true,
 		"views":423
 	},
 	{
@@ -117,6 +124,7 @@
 			"Pizza", "American"
 		],
 		"image": "http://www.theculturebite.com/wp-content/uploads/2011/05/Pi-Bar-Bell-Pepper-Mushroom-Pepperoni-Pizza.jpg",
+		"alcohol": true,
 		"views":213
 	},
 	{
@@ -134,6 +142,7 @@
 			"Pizza", "American"
 		],
 		"image":"http://3.bp.blogspot.com/-AYUowqV-HDI/T-W3lqUcdhI/AAAAAAAAWXg/r_PNXepIm0g/s1600/costco_combo_pizza_01.JPG",
+		"alcohol": true,
 		"views":422
 	},
 	{
@@ -151,6 +160,7 @@
 			"Burger"
 		],
 		"image":"https://i.kinja-img.com/gawker-media/image/upload/s--VgxR90Sk--/c_scale,fl_progressive,q_80,w_800/jcyh9h5vdo545h2nvwwu.jpg",
+		"alcohol": true,
 		"views":23
 	},
 	{
@@ -168,6 +178,7 @@
 			"Burger"
 		],
 		"image":"http://www.centralmarket.com/getattachment/de5c8e60-c622-422f-b0b1-38178d3bb832/Summer-is-the-Season-of-the-Burger.aspx",
+		"alcohol": false,
 		"views":77
 	},
 	{
@@ -185,6 +196,7 @@
 			"Burger"
 		],
 		"image":"http://media.coreperformance.com/images/how-to-build-a-healthy-pizza.jpg",
+		"alcohol": true,
 		"views":889
 	},
 	{
@@ -202,6 +214,7 @@
 			"Burger"
 		],
 		"image":"https://cdn2.vox-cdn.com/thumbor/kIUns00Z7prhYS1alW_DHQiJQzw=/0x600/cdn0.vox-cdn.com/uploads/chorus_asset/file/3617842/Alden___Harlow_burger_-_Rachel_Leah_Blumenthal_-_01.0.jpg",
+		"alcohol": false,
 		"views":423
 	},
 	{
@@ -219,6 +232,7 @@
 			"Burger"
 		],
 		"image": "http://kingsfamily.com/wp-content/uploads/2015/05/kings-burgers-kings-classic-double-burger-with-cheese.jpg",
+		"alcohol": false,
 		"views":213
 	},
 	{
@@ -236,6 +250,7 @@
 			"Burger"
 		],
 		"image":"http://friendsandbrgrs.com/app/uploads/2015/04/veggie-burger.jpg",
+		"alcohol": true,
 		"views":422
 	},
 	{
@@ -253,6 +268,7 @@
 			"Burger"
 		],
 		"image":"http://www.justshortofcrazy.com/wp-content/uploads/2014/05/FiestaBurger.jpg",
+		"alcohol": false,
 		"views":23
 	},
 	{
@@ -270,6 +286,7 @@
 			"Burger"
 		],
 		"image":"http://vb3restaurant.com/wp-content/uploads/2014/12/menu-vb3-burger-01-800x600.jpg",
+		"alcohol": false,
 		"views":77
 	},
 	{
@@ -287,6 +304,7 @@
 			"Burger"
 		],
 		"image":"http://kingsfamily.com/wp-content/uploads/2015/05/kings-burgers-mushroom-swiss-burger.jpg",
+		"alcohol": true,
 		"views":889
 	},
 	{
@@ -304,6 +322,7 @@
 			"French Fries"
 		],
 		"image":"http://images.fanpop.com/images/image_uploads/French-Fries-Wallpaper-french-fries-262837_800_600.jpg",
+		"alcohol": false,
 		"views":423
 	},
 	{
@@ -321,6 +340,7 @@
 			"French Fries"
 		],
 		"image": "http://cdn.patch.com/users/790386/stock_20150427/T800x600/20150154c4806c458f6.jpg",
+		"alcohol": true,
 		"views":213
 	},
 	{
@@ -338,6 +358,7 @@
 			"French Fries"
 		],
 		"image":"https://d9hblenkye35w.cloudfront.net/media/thumbnail/ext/xl/http%253A%252F%252Fwww.delonghi.com%252FPageFiles%252F789038%252Ffrench-fries.jpg",
+		"alcohol": true,
 		"views":422
 	},
 	{
@@ -355,6 +376,7 @@
 			"French Fries"
 		],
 		"image":"http://xpatnation.com/wp-content/uploads/2015/05/furikake-fries.jpg",
+		"alcohol": true,
 		"views":23
 	},
 	{
@@ -372,6 +394,7 @@
 			"French Fries"
 		],
 		"image":"http://www.itslife.in/wp-content/uploads/2013/10/recipes-snacks-french-fries_0.jpg",
+		"alcohol": true,
 		"views":77
 	},
 	{
@@ -389,6 +412,7 @@
 			"Chicken Wings"
 		],
 		"image":"http://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/recipe_photos/30492_korean_chicken_wings.jpg",
+		"alcohol": false,
 		"views":889
 	},
 	{
@@ -406,6 +430,7 @@
 			"Chicken Wings"
 		],
 		"image":"https://upload.wikimedia.org/wikipedia/commons/8/81/Homemade_buffalo_wings.jpg",
+		"alcohol": true,
 		"views":423
 	},
 	{
@@ -423,6 +448,7 @@
 			"Chicken Wings"
 		],
 		"image": "http://search.chow.com/thumbnail/800/600/www.chowstatic.com/assets/2014/09/28068_buffalo_chicken_wings.jpg",
+		"alcohol": false,
 		"views":213
 	},
 	{
@@ -440,6 +466,7 @@
 			"Chicken Wings"
 		],
 		"image":"http://recipegreat.com/images/mahogany-chicken-wings-01.jpg",
+		"alcohol": true,
 		"views":422
 	},
 	{
@@ -457,6 +484,7 @@
 			"Chicken Wings"
 		],
 		"image":"http://www.primogrill.com/images/com_yoorecipe/596/cropped-Chicken_Wing_Pieces_Maple_Glazed.protected.jpg",
+		"alcohol": false,
 		"views":23
 	},
 	{
@@ -474,6 +502,7 @@
 			"Chicken Wings"
 		],
 		"image":"http://www.saturdayeveningpost.com/wp-content/uploads/satevepost/photo_20091016_baked_chicken_wings.jpg",
+		"alcohol": true,
 		"views":77
 	}	
 ]
